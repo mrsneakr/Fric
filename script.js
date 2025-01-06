@@ -8,6 +8,12 @@ const previewContainer = document.getElementById('previewContainer');
 optionLists.forEach(list => {
     list.addEventListener('click', (event) => {
         if (event.target.tagName === 'IMG') {
+            // Entferne die 'selected'-Klasse von allen Bildern in der Liste
+            list.querySelectorAll('img').forEach(img => img.classList.remove('selected'));
+
+            // Füge die 'selected'-Klasse zum angeklickten Bild hinzu
+            event.target.classList.add('selected');
+
             const layerId = event.target.dataset.layer;
             const imageSrc = event.target.dataset.image;
             const layerElement = document.getElementById(layerId);
