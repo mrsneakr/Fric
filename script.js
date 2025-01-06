@@ -1,6 +1,4 @@
 const optionLists = document.querySelectorAll('.option-list');
-const scrollLeftButtons = document.querySelectorAll('.scroll-left');
-const scrollRightButtons = document.querySelectorAll('.scroll-right');
 const downloadButton = document.getElementById('downloadButton');
 const randomizeButton = document.getElementById('randomizeButton');
 const previewContainer = document.getElementById('previewContainer');
@@ -11,7 +9,7 @@ optionLists.forEach(list => {
             // Entferne die 'selected'-Klasse von allen Bildern in der Liste
             list.querySelectorAll('img').forEach(img => img.classList.remove('selected'));
 
-            // FÃ¼ge die 'selected'-Klasse zum angeklickten Bild hinzu
+            // Füge die 'selected'-Klasse zum angeklickten Bild hinzu
             event.target.classList.add('selected');
 
             const layerId = event.target.dataset.layer;
@@ -21,21 +19,6 @@ optionLists.forEach(list => {
                 layerElement.src = imageSrc;
             }
         }
-    });
-});
-scrollLeftButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const targetId = button.dataset.target;
-        const targetList = document.getElementById(targetId);
-        targetList.scrollLeft -= 100;
-    });
-});
-
-scrollRightButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const targetId = button.dataset.target;
-        const targetList = document.getElementById(targetId);
-        targetList.scrollLeft += 100;
     });
 });
 
@@ -51,16 +34,37 @@ downloadButton.addEventListener('click', () => {
     });
 });
 
-randomizeButton.addEventListener('click', () => {
+function randomizeCharacter() {
     optionLists.forEach(list => {
         const images = list.querySelectorAll('img');
         const randomIndex = Math.floor(Math.random() * images.length);
-        const randomImage = images[randomIndex];
-        const layerId = randomImage.dataset.layer;
-        const imageSrc = randomImage.dataset.image;
+        const selectedImage = images[randomIndex];
+
+        list.querySelectorAll('img').forEach(img => img.classList.remove('selected'));
+        selectedImage.classList.add('selected');
+
+        const layerId = selectedImage.dataset.layer;
+        const imageSrc = selectedImage.dataset.image;
         const layerElement = document.getElementById(layerId);
         if (layerElement) {
             layerElement.src = imageSrc;
+        }
+    });
+}
+
+randomizeButton.addEventListener('click', randomizeCharacter);
+    optionLists.forEach(list => {
+        list.addEventListener('click', (event) => {
+            if (event.target.tagName === 'IMG') {
+                list.querySelectorAll('img').forEach(img => img.classList.remove('selected'));
+                event.target.classList.add('selected');
+
+                const layerId = event.target.dataset.layer;
+                const imageSrc = event.target.dataset.image;
+                const layerElement = document.getElementById(layerId);
+                if (layerElement) {
+                layerElement.src = imageSrc;
+            }
         }
     });
 });

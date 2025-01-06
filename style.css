@@ -23,6 +23,7 @@ body {
     display: flex;
     width: 90vw;
     max-width: 1200px;
+    margin-bottom: 20px; /* Platz für die Buttons unterhalb */
 }
 
 .preview {
@@ -32,8 +33,8 @@ body {
     margin-right: 20px;
     width: 50%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; /* Für vertikale Anordnung von Bild und Buttons */
+    align-items: center; /* Zentriert horizontal */
 }
 
 #previewContainer {
@@ -42,6 +43,7 @@ body {
     position: relative;
     max-width: 400px;
     max-height: 400px;
+    margin-bottom: 50px; /* Abstand zwischen Bild und Buttons */
 }
 
 .layer {
@@ -78,9 +80,9 @@ body {
         border: 1px solid black;
     }
 
-    .option-list img.selected {
-        border: 2px solid blue; /* Oder eine andere Farbe und Stil */
-    }
+        .option-list img.selected {
+            border: 2px solid #8BC34A;
+        }
 
 h2 {
     text-align: center;
@@ -102,4 +104,42 @@ h2 {
 
     ::-webkit-scrollbar-thumb:hover {
         background: #555;
+    }
+
+/* Styles für die Buttons */
+#randomizeButton,
+#downloadButton {
+    font-family: 'Vividly', sans-serif;
+    font-weight: bold;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: 2px solid #689F38;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    width: 400px;
+    margin: 10px auto; /* Zentriert die Buttons und gibt Abstand */
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    height: 80px;
+    line-height: 50px;
+    background-color: #689F38;
+}
+
+    #randomizeButton:hover,
+    #downloadButton:hover {
+        background-color: #3f631f;
+        border-color: #23400a;
+        transform: scale(1.02);
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    #randomizeButton:active,
+    #downloadButton:active {
+        transform: scale(0.98);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
     }
