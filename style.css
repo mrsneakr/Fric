@@ -1,13 +1,19 @@
-.lacquer-regular {
-  font-family: "Lacquer", serif;
+.amatic-sc-regular {
+  font-family: "Amatic SC", serif;
   font-weight: 400;
+  font-style: normal;
+}
+
+.amatic-sc-bold {
+  font-family: "Amatic SC", serif;
+  font-weight: 700;
   font-style: normal;
 }
 
 body {
     background-color: #fff;
     color: #000;
-    font-family: 'Lacquer', serif;
+    font-family: 'Amatic SC', serif;
     font-size: 20px;
     display: flex;
     justify-content: center;
@@ -108,8 +114,8 @@ h2 {
 /* Styles für die Buttons */
 #randomizeButton,
 #downloadButton {
-    font-family: 'Lacquer', serif;
-    font-weight: normal;
+    font-family: 'Amatic SC', serif;
+    font-weight: bold;
     color: #FFFFFF;
     padding: 10px 20px;
     border: 2px solid #689F38;
