@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'vividlyregular';
-    src: url('fonts/vividly-regular-webfont.woff2') format('woff2'),
-         url('fonts/vividly-regular-webfont.woff') format('woff');
+    src: url('fonts/vividly-regular.woff2') format('woff2'),
+         url('fonts/vividly-regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
