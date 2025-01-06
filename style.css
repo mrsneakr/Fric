@@ -1,7 +1,7 @@
 body {
     background-color: #fff;
     color: #000;
-    font-family: 'Lacquer', sans-serif;
+    font-family: 'Lacquer', regular;
     font-size: 20px;
     display: flex;
     justify-content: center;
@@ -102,7 +102,7 @@ h2 {
 /* Styles für die Buttons */
 #randomizeButton,
 #downloadButton {
-    font-family: 'Lacquer', sans-serif;
+    font-family: 'Lacquer', regular;
     font-weight: bold;
     color: #FFFFFF;
     padding: 10px 20px;
