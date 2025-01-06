@@ -78,6 +78,10 @@ body {
         border: 1px solid black;
     }
 
+    .option-list img.selected {
+        border: 2px solid blue; /* Oder eine andere Farbe und Stil */
+    }
+
 h2 {
     text-align: center;
 }
