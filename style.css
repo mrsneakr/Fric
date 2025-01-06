@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'Vividly';
+    src: url('fonts/vividly-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #fff;
+    color: #000;
+    font-family: 'Vividly', sans-serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    border: 2px solid #000;
+    padding: 20px;
+    display: flex;
+    width: 90vw;
+    max-width: 1200px;
+}
+
+.preview {
+    border: 2px solid #000;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-right: 20px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#previewContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    max-width: 400px;
+    max-height: 400px;
+}
+
+.layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    max-height: 100%;
+    pointer-events: none;
+}
+
+.options {
+    width: 50%;
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+.category {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+}
+
+.option-list {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px;
+}
+
+    .option-list img {
+        width: 75px;
+        cursor: pointer;
+        margin: 5px;
+        border: 1px solid black;
+    }
+
+h2 {
+    text-align: center;
+}
+
+/* Scrollbar anpassen */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #eee;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
