@@ -1,16 +1,7 @@
-@font-face {
-    font-family: 'vividlyregular';
-    src: url('fonts/vividly-regular.woff2') format('woff2'),
-         url('fonts/vividly-regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
 body {
     background-color: #fff;
     color: #000;
-    font-family: 'Vividly', sans-serif;
+    font-family: 'Lacquer', sans-serif;
     font-size: 20px;
     display: flex;
     justify-content: center;
@@ -111,7 +102,7 @@ h2 {
 /* Styles für die Buttons */
 #randomizeButton,
 #downloadButton {
-    font-family: 'Vividly', sans-serif;
+    font-family: 'Lacquer', sans-serif;
     font-weight: bold;
     color: #FFFFFF;
     padding: 10px 20px;
