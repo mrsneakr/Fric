@@ -29,7 +29,7 @@ const sendFricTokens = async (amount) => {
 
   const connection = new Connection("https://api.mainnet-beta.solana.com");
   const fromPubkey = new PublicKey(walletAddress);
-  const toPubkey = new PublicKey("6Y16GQTbeUSQga6McvkzX8JM96GUD8HYX155PmdwgBun"); // Ersetze mit der Projekt-Wallet-Adresse
+  const toPubkey = new PublicKey(6Y16GQTbeUSQga6McvkzX8JM96GUD8HYX155PmdwgBun); // Ersetze mit der Projekt-Wallet-Adresse
 
   try {
     const transaction = new Transaction().add(
