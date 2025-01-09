@@ -29,7 +29,7 @@ const sendFricTokens = async (amount) => {
 
   const connection = new Connection("https://api.mainnet-beta.solana.com");
   const fromPubkey = new PublicKey(walletAddress);
-  const toPubkey = new PublicKey("DEINE_WALLET_ADRESSE"); // Ersetze mit der Projekt-Wallet-Adresse
+  const toPubkey = new PublicKey("6Y16GQTbeUSQga6McvkzX8JM96GUD8HYX155PmdwgBun"); // Ersetze mit der Projekt-Wallet-Adresse
 
   try {
     const transaction = new Transaction().add(
@@ -56,7 +56,7 @@ let currentRank = null;
 
 // Funktionen für Charakter und Attribute
 async function randomizeCharacter() {
-  const costInFric = 0.1; // Kosten pro Spin in Fric-Token
+  const costInFric = 1; // Kosten pro Spin in Fric-Token
 
   // Wenn der aktuelle Rank < 500 ist, zeige eine Bestätigungsabfrage
   if (currentRank !== null && currentRank < 500) {
