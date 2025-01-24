@@ -3,13 +3,32 @@ const downloadButton = document.getElementById('downloadButton');
 const randomizeButton = document.getElementById('randomizeButton');
 const previewContainer = document.getElementById('previewContainer');
 
+// Zufällige Auswahl für jeden Layer
+function randomizeCharacter() {
+    optionLists.forEach(list => {
+        const images = list.querySelectorAll('img');
+        const randomIndex = Math.floor(Math.random() * images.length);
+        const selectedImage = images[randomIndex];
+
+        // Entferne "selected"-Klasse und setze sie neu
+        list.querySelectorAll('img').forEach(img => img.classList.remove('selected'));
+        selectedImage.classList.add('selected');
+
+        // Aktualisiere das Vorschaubild
+        const layerId = selectedImage.dataset.layer;
+        const imageSrc = selectedImage.dataset.image;
+        const layerElement = document.getElementById(layerId);
+        if (layerElement) {
+            layerElement.src = imageSrc;
+        }
+    });
+}
+
+// Event-Listener für den Click auf Optionen
 optionLists.forEach(list => {
     list.addEventListener('click', (event) => {
         if (event.target.tagName === 'IMG') {
-            // Entferne die 'selected'-Klasse von allen Bildern in der Liste
             list.querySelectorAll('img').forEach(img => img.classList.remove('selected'));
-
-            // Füge die 'selected'-Klasse zum angeklickten Bild hinzu
             event.target.classList.add('selected');
 
             const layerId = event.target.dataset.layer;
@@ -22,7 +41,7 @@ optionLists.forEach(list => {
     });
 });
 
-
+// Event-Listener für den Download-Button
 downloadButton.addEventListener('click', () => {
     html2canvas(previewContainer).then(canvas => {
         const link = document.createElement('a');
@@ -34,37 +53,5 @@ downloadButton.addEventListener('click', () => {
     });
 });
 
-function randomizeCharacter() {
-    optionLists.forEach(list => {
-        const images = list.querySelectorAll('img');
-        const randomIndex = Math.floor(Math.random() * images.length);
-        const selectedImage = images[randomIndex];
-
-        list.querySelectorAll('img').forEach(img => img.classList.remove('selected'));
-        selectedImage.classList.add('selected');
-
-        const layerId = selectedImage.dataset.layer;
-        const imageSrc = selectedImage.dataset.image;
-        const layerElement = document.getElementById(layerId);
-        if (layerElement) {
-            layerElement.src = imageSrc;
-        }
-    });
-}
-
+// Event-Listener für den Randomize-Button
 randomizeButton.addEventListener('click', randomizeCharacter);
-    optionLists.forEach(list => {
-        list.addEventListener('click', (event) => {
-            if (event.target.tagName === 'IMG') {
-                list.querySelectorAll('img').forEach(img => img.classList.remove('selected'));
-                event.target.classList.add('selected');
-
-                const layerId = event.target.dataset.layer;
-                const imageSrc = event.target.dataset.image;
-                const layerElement = document.getElementById(layerId);
-                if (layerElement) {
-                layerElement.src = imageSrc;
-            }
-        }
-    });
-});
