@@ -16,7 +16,12 @@
 </head>
 <body>
     <div class="container">
-        <div class="preview">
+        <!-- Überschrift -->
+        <h1 class="main-title">Fric Generator</h1>
+        <h2 class="subtitle">Create your unique Fric!</h2>
+
+        <!-- Vorschau -->
+        <div class="preview-box">
             <div id="previewContainer">
                 <img id="layer1" src="layer1/bg1.png" class="layer" alt="Layer 1">
                 <img id="layer2" src="layer2/color1.png" class="layer" alt="Layer 2">
@@ -25,155 +30,18 @@
                 <img id="layer5" src="layer5/eye1.png" class="layer" alt="Layer 5">
                 <img id="layer6" src="layer6/design1_1.png" class="layer" alt="Layer 6">
             </div>
-            <div id="button-container">
-                <button id="randomizeButton">Randomize</button>
-                <button id="downloadButton">Download</button>
-            </div>
         </div>
-        <div class="options">
-            <!-- Layer 1 -->
-            <div class="category">
-                <h2>Layer 1</h2>
-                <div class="option-list" id="layer1Options">
-                    <img src="layer1/bg1.png" alt="Background 1" data-layer="layer1" data-image="layer1/bg1.png">
-                </div>
-            </div>
-            <!-- Layer 2 -->
-            <div class="category">
-                <h2>Layer 2</h2>
-                <div class="option-list" id="layer2Options">
-                    <img src="layer2/color1.png" alt="Color 1" data-layer="layer2" data-image="layer2/color1.png">
-                    <img src="layer2/color2.png" alt="Color 2" data-layer="layer2" data-image="layer2/color2.png">
-                    <img src="layer2/color3.png" alt="Color 3" data-layer="layer2" data-image="layer2/color3.png">
-                    <img src="layer2/color4.png" alt="Color 4" data-layer="layer2" data-image="layer2/color4.png">
-                    <img src="layer2/color5.png" alt="Color 5" data-layer="layer2" data-image="layer2/color5.png">
-                    <img src="layer2/color6.png" alt="Color 6" data-layer="layer2" data-image="layer2/color6.png">
-                    <img src="layer2/color7.png" alt="Color 7" data-layer="layer2" data-image="layer2/color7.png">
-                    <img src="layer2/color8.png" alt="Color 8" data-layer="layer2" data-image="layer2/color8.png">
-                    <img src="layer2/color9.png" alt="Color 9" data-layer="layer2" data-image="layer2/color9.png">
-                    <img src="layer2/color10.png" alt="Color 10" data-layer="layer2" data-image="layer2/color10.png">
-                    <img src="layer2/color11.png" alt="Color 11" data-layer="layer2" data-image="layer2/color11.png">
-                </div>
-            </div>
-            <!-- Layer 3 -->
-            <div class="category">
-                <h2>Layer 3</h2>
-                <div class="option-list" id="layer3Options">
-                    <img src="layer3/shape.png" alt="Shape" data-layer="layer3" data-image="layer3/shape.png">
-                </div>
-            </div>
-            <!-- Layer 4 -->
-            <div class="category">
-                <h2>Layer 4</h2>
-                <div class="option-list" id="layer4Options">
-                    <img src="layer4/mouth1.png" alt="Mouth 1" data-layer="layer4" data-image="layer4/mouth1.png">
-                </div>
-            </div>
-            <!-- Layer 5 -->
-            <div class="category">
-                <h2>Layer 5</h2>
-                <div class="option-list" id="layer5Options">
-                    <img src="layer5/eye1.png" alt="Eye 1" data-layer="layer5" data-image="layer5/eye1.png">
-                    <img src="layer5/eye2.png" alt="Eye 2" data-layer="layer5" data-image="layer5/eye2.png">
-                    <img src="layer5/eye3.png" alt="Eye 3" data-layer="layer5" data-image="layer5/eye3.png">
-                    <img src="layer5/eye4.png" alt="Eye 4" data-layer="layer5" data-image="layer5/eye4.png">
-                    <img src="layer5/eye5.png" alt="Eye 5" data-layer="layer5" data-image="layer5/eye5.png">
-                    <img src="layer5/eye6.png" alt="Eye 6" data-layer="layer5" data-image="layer5/eye6.png">
-                    <img src="layer5/eye7.png" alt="Eye 7" data-layer="layer5" data-image="layer5/eye7.png">
-                    <img src="layer5/eye8.png" alt="Eye 8" data-layer="layer5" data-image="layer5/eye8.png">
-                    <img src="layer5/eye9.png" alt="Eye 9" data-layer="layer5" data-image="layer5/eye9.png">
-                    <img src="layer5/eye10.png" alt="Eye 10" data-layer="layer5" data-image="layer5/eye10.png">
-                    <img src="layer5/eye11.png" alt="Eye 11" data-layer="layer5" data-image="layer5/eye11.png">
-                </div>
-            </div>
-            <!-- Layer 6 -->
-            <div class="category">
-                <h2>Layer 6</h2>
-                <div class="option-list" id="layer6Options">
-                    <img src="layer6/design1_1.png" alt="Design 1_1" data-layer="layer6" data-image="layer6/design1_1.png">
-                    <img src="layer6/design1_2.png" alt="Design 1_2" data-layer="layer6" data-image="layer6/design1_2.png">
-                    <img src="layer6/design1_3.png" alt="Design 1_3" data-layer="layer6" data-image="layer6/design1_3.png">
-                    <img src="layer6/design1_4.png" alt="Design 1_4" data-layer="layer6" data-image="layer6/design1_4.png">
-                    <img src="layer6/design1_5.png" alt="Design 1_5" data-layer="layer6" data-image="layer6/design1_5.png">
-                    <img src="layer6/design1_6.png" alt="Design 1_6" data-layer="layer6" data-image="layer6/design1_6.png">
-                    <img src="layer6/design1_7.png" alt="Design 1_7" data-layer="layer6" data-image="layer6/design1_7.png">
-                    <img src="layer6/design1_8.png" alt="Design 1_8" data-layer="layer6" data-image="layer6/design1_8.png">
-                    <img src="layer6/design2_1.png" alt="Design 2_1" data-layer="layer6" data-image="layer6/design2_1.png">
-                    <img src="layer6/design2_2.png" alt="Design 2_2" data-layer="layer6" data-image="layer6/design2_2.png">
-                    <img src="layer6/design2_3.png" alt="Design 2_3" data-layer="layer6" data-image="layer6/design2_3.png">
-                    <img src="layer6/design2_4.png" alt="Design 2_4" data-layer="layer6" data-image="layer6/design2_4.png">
-                    <img src="layer6/design3_1.png" alt="Design 3_1" data-layer="layer6" data-image="layer6/design3_1.png">
-                    <img src="layer6/design3_2.png" alt="Design 3_2" data-layer="layer6" data-image="layer6/design3_2.png">
-                    <img src="layer6/design3_3.png" alt="Design 3_3" data-layer="layer6" data-image="layer6/design3_3.png">
-                    <img src="layer6/design3_4.png" alt="Design 3_4" data-layer="layer6" data-image="layer6/design3_4.png">
-                    <img src="layer6/design3_5.png" alt="Design 3_5" data-layer="layer6" data-image="layer6/design3_5.png">
-                    <img src="layer6/design3_6.png" alt="Design 3_6" data-layer="layer6" data-image="layer6/design3_6.png">
-                    <img src="layer6/design4.png" alt="Design 4" data-layer="layer6" data-image="layer6/design4.png">
-                    <img src="layer6/design5.png" alt="Design 5" data-layer="layer6" data-image="layer6/design5.png">
-                    <img src="layer6/design6_1.png" alt="Design 6_1" data-layer="layer6" data-image="layer6/design6_1.png">
-                    <img src="layer6/design6_2.png" alt="Design 6_2" data-layer="layer6" data-image="layer6/design6_2.png">
-                    <img src="layer6/design6_3.png" alt="Design 6_3" data-layer="layer6" data-image="layer6/design6_3.png">
-                    <img src="layer6/design6_4.png" alt="Design 6_4" data-layer="layer6" data-image="layer6/design6_4.png">
-                    <img src="layer6/design6_5.png" alt="Design 6_5" data-layer="layer6" data-image="layer6/design6_5.png">
-                    <img src="layer6/design7.png" alt="Design 7" data-layer="layer6" data-image="layer6/design7.png">
-                    <img src="layer6/design8.png" alt="Design 8" data-layer="layer6" data-image="layer6/design8.png">
-                    <img src="layer6/design9_1.png" alt="Design 9_1" data-layer="layer6" data-image="layer6/design9_1.png">
-                    <img src="layer6/design9_2.png" alt="Design 9_2" data-layer="layer6" data-image="layer6/design9_2.png">
-                    <img src="layer6/design9_3.png" alt="Design 9_3" data-layer="layer6" data-image="layer6/design9_3.png">
-                    <img src="layer6/design9_4.png" alt="Design 9_4" data-layer="layer6" data-image="layer6/design9_4.png">
-                    <img src="layer6/design9_5.png" alt="Design 9_5" data-layer="layer6" data-image="layer6/design9_5.png">
-                    <img src="layer6/design9_6.png" alt="Design 9_6" data-layer="layer6" data-image="layer6/design9_6.png">
-                    <img src="layer6/design10.png" alt="Design 10" data-layer="layer6" data-image="layer6/design10.png">
-                    <img src="layer6/design11_1.png" alt="Design 11_1" data-layer="layer6" data-image="layer6/design11_1.png">
-                    <img src="layer6/design11_2.png" alt="Design 11_2" data-layer="layer6" data-image="layer6/design11_2.png">
-                    <img src="layer6/design11_3.png" alt="Design 11_3" data-layer="layer6" data-image="layer6/design11_3.png">
-                    <img src="layer6/design11_4.png" alt="Design 11_4" data-layer="layer6" data-image="layer6/design11_4.png">
-                    <img src="layer6/design12_1.png" alt="Design 12_1" data-layer="layer6" data-image="layer6/design12_1.png">
-                    <img src="layer6/design12_2.png" alt="Design 12_2" data-layer="layer6" data-image="layer6/design12_2.png">
-                    <img src="layer6/design12_3.png" alt="Design 12_3" data-layer="layer6" data-image="layer6/design12_3.png">
-                    <img src="layer6/design12_4.png" alt="Design 12_4" data-layer="layer6" data-image="layer6/design12_4.png">
-                    <img src="layer6/design12_5.png" alt="Design 12_5" data-layer="layer6" data-image="layer6/design12_5.png">
-                    <img src="layer6/design13_1.png" alt="Design 13_1" data-layer="layer6" data-image="layer6/design13_1.png">
-                    <img src="layer6/design13_2.png" alt="Design 13_2" data-layer="layer6" data-image="layer6/design13_2.png">
-                    <img src="layer6/design13_3.png" alt="Design 13_3" data-layer="layer6" data-image="layer6/design13_3.png">
-                    <img src="layer6/design13_4.png" alt="Design 13_4" data-layer="layer6" data-image="layer6/design13_4.png">
-                    <img src="layer6/design13_5.png" alt="Design 13_5" data-layer="layer6" data-image="layer6/design13_5.png">
-                    <img src="layer6/design13_6.png" alt="Design 13_6" data-layer="layer6" data-image="layer6/design13_6.png">
-                    <img src="layer6/design13_7.png" alt="Design 13_7" data-layer="layer6" data-image="layer6/design13_7.png">
-                    <img src="layer6/design13_8.png" alt="Design 13_8" data-layer="layer6" data-image="layer6/design13_8.png">
-                    <img src="layer6/design14_1.png" alt="Design 14_1" data-layer="layer6" data-image="layer6/design14_1.png">
-                    <img src="layer6/design14_2.png" alt="Design 14_2" data-layer="layer6" data-image="layer6/design14_2.png">
-                    <img src="layer6/design14_3.png" alt="Design 14_3" data-layer="layer6" data-image="layer6/design14_3.png">
-                    <img src="layer6/design14_4.png" alt="Design 14_4" data-layer="layer6" data-image="layer6/design14_4.png">
-                    <img src="layer6/design14_5.png" alt="Design 14_5" data-layer="layer6" data-image="layer6/design14_5.png">
-                    <img src="layer6/design14_6.png" alt="Design 14_6" data-layer="layer6" data-image="layer6/design14_6.png">
-                    <img src="layer6/design14_7.png" alt="Design 14_7" data-layer="layer6" data-image="layer6/design14_7.png">
-                    <img src="layer6/design14_8.png" alt="Design 14_8" data-layer="layer6" data-image="layer6/design14_8.png">
-                    <img src="layer6/design15.png" alt="Design 15" data-layer="layer6" data-image="layer6/design15.png">
-                    <img src="layer6/design16.png" alt="Design 16" data-layer="layer6" data-image="layer6/design16.png">
-                    <img src="layer6/design17.png" alt="Design 17" data-layer="layer6" data-image="layer6/design17.png">
-                    <img src="layer6/design18_1.png" alt="Design 18_1" data-layer="layer6" data-image="layer6/design18_1.png">
-                    <img src="layer6/design18_2.png" alt="Design 18_2" data-layer="layer6" data-image="layer6/design18_2.png">
-                    <img src="layer6/design18_3.png" alt="Design 18_3" data-layer="layer6" data-image="layer6/design18_3.png">
-                    <img src="layer6/design18_4.png" alt="Design 18_4" data-layer="layer6" data-image="layer6/design18_4.png">
-                    <img src="layer6/design18_5.png" alt="Design 18_5" data-layer="layer6" data-image="layer6/design18_5.png">
-                    <img src="layer6/design18_6.png" alt="Design 18_6" data-layer="layer6" data-image="layer6/design18_6.png">
-                    <img src="layer6/design18_7.png" alt="Design 18_7" data-layer="layer6" data-image="layer6/design18_7.png">
-                    <img src="layer6/design18_8.png" alt="Design 18_8" data-layer="layer6" data-image="layer6/design18_8.png">
-                    <img src="layer6/design19_1.png" alt="Design 19_1" data-layer="layer6" data-image="layer6/design19_1.png">
-                    <img src="layer6/design19_2.png" alt="Design 19_2" data-layer="layer6" data-image="layer6/design19_2.png">
-                    <img src="layer6/design19_3.png" alt="Design 19_3" data-layer="layer6" data-image="layer6/design19_3.png">
-                    <img src="layer6/design19_4.png" alt="Design 19_4" data-layer="layer6" data-image="layer6/design19_4.png">
-                    <img src="layer6/design19_5.png" alt="Design 19_5" data-layer="layer6" data-image="layer6/design19_5.png">
-                    <img src="layer6/design20_1.png" alt="Design 20_1" data-layer="layer6" data-image="layer6/design20_1.png">
-                    <img src="layer6/design20_2.png" alt="Design 20_2" data-layer="layer6" data-image="layer6/design20_2.png">
-                    <img src="layer6/design20_3.png" alt="Design 20_3" data-layer="layer6" data-image="layer6/design20_3.png">
-                    <img src="layer6/design20_4.png" alt="Design 20_4" data-layer="layer6" data-image="layer6/design20_4.png">
-                    <!-- Wiederhole alle Designs aus Layer 6 basierend auf deinem Bild -->
-                </div>
-            </div>
+
+        <!-- Namensfeld -->
+        <input type="text" id="nameInput" placeholder="Enter your name" />
+
+        <!-- Buttons -->
+        <div class="button-container">
+            <button id="randomizeButton">Randomize 🎲</button>
+            <button id="downloadButton">Download ⬇️</button>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
