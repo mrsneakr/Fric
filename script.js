@@ -5,41 +5,18 @@ const previewContainer = document.getElementById('previewContainer');
 
 // Zufällige Auswahl für jeden Layer
 function randomizeCharacter() {
-    optionLists.forEach(list => {
-        const images = list.querySelectorAll('img');
-        const randomIndex = Math.floor(Math.random() * images.length);
-        const selectedImage = images[randomIndex];
+    const layers = ['layer1', 'layer2', 'layer3', 'layer4', 'layer5', 'layer6'];
 
-        // Entferne "selected"-Klasse und setze sie neu
-        list.querySelectorAll('img').forEach(img => img.classList.remove('selected'));
-        selectedImage.classList.add('selected');
-
-        // Aktualisiere das Vorschaubild
-        const layerId = selectedImage.dataset.layer;
-        const imageSrc = selectedImage.dataset.image;
-        const layerElement = document.getElementById(layerId);
-        if (layerElement) {
-            layerElement.src = imageSrc;
-        }
+    layers.forEach(layer => {
+        const layerElement = document.getElementById(layer);
+        const folder = layer.slice(0, 6);
+        const randomIndex = Math.floor(Math.random() * 10) + 1; // Simulierte Anzahl von Assets
+        layerElement.src = `${folder}/${layer}${randomIndex}.png`;
     });
 }
 
-// Event-Listener für den Click auf Optionen
-optionLists.forEach(list => {
-    list.addEventListener('click', (event) => {
-        if (event.target.tagName === 'IMG') {
-            list.querySelectorAll('img').forEach(img => img.classList.remove('selected'));
-            event.target.classList.add('selected');
-
-            const layerId = event.target.dataset.layer;
-            const imageSrc = event.target.dataset.image;
-            const layerElement = document.getElementById(layerId);
-            if (layerElement) {
-                layerElement.src = imageSrc;
-            }
-        }
-    });
-});
+// Event-Listener für den Randomize-Button
+randomizeButton.addEventListener('click', randomizeCharacter);
 
 // Event-Listener für den Download-Button
 downloadButton.addEventListener('click', () => {
@@ -48,10 +25,5 @@ downloadButton.addEventListener('click', () => {
         link.href = canvas.toDataURL('image/png');
         link.download = 'character.png';
         link.click();
-    }).catch(error => {
-        console.error("Fehler beim Erstellen des Canvas:", error);
-    });
+    }).catch(error => console.error("Error generating canvas:", error));
 });
-
-// Event-Listener für den Randomize-Button
-randomizeButton.addEventListener('click', randomizeCharacter);
